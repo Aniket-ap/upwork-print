@@ -19,25 +19,25 @@
       <!-- page setup Content -->
       <table border="0" style="width:100%">
         <tr>
-          <td style="width:50%">
-            <label for="print" class="form-label">Print</label>
+          <td>
+            <label for="print-1d" class="form-label">Print</label>
             <div class="input-group">
-              <select class="form-select" id="print">
+              <select class="form-select" id="print-1d">
                 <option selected value="currentsheet">Current sheet</option>
                 <option value="workbook">Workbook</option>
                 <option value="selectedcells">Selected cells(A1)</option>
               </select>
-              <span class="input-group-text" id="range">Range</span>
-              <input type="text" class="form-control" aria-label="Sizing example input"
+              <span class="input-group-text">Range</span>
+              <input type="text" class="form-control" id="print-range-1d" aria-label="Sizing example input"
                 aria-describedby="inputGroup-sizing-default">
             </div>
           </td>
         </tr>
         <tr>
-          <td style="width:50%">
-            <label for="paper-size" class="form-label">Paper size</label>
+          <td>
+            <label for="paper-size-1d" class="form-label">Paper size</label>
             <div class="input-group">
-              <select class="form-select" id="paper-size">
+              <select class="form-select" id="paper-size-1d">
                 <option selected value="currentsheet">Letter (8.5" * 11")</option>
                 <option value="currentsheet">Tabloid (11" * 17")</option>
                 <option value="currentsheet">Legal (8.5" * 14")</option>
@@ -51,39 +51,39 @@
                 <option value="currentsheet">B5 (6.93" * 9.84")</option>
                 <option value="custom">Custom</option>
               </select>
-              <span class="input-group-text" id="inputGroup-sizing-default">Height</span>
-              <input type="number" class="form-control" value="5.55" step="0.5">
-              <span class="input-group-text" id="inputGroup-sizing-default">Width</span>
-              <input type="number" class="form-control" value="9.99" step="0.5">
+              <span class="input-group-text">Height</span>
+              <input type="number" class="form-control" id="paper-size-height-1d" value="5.55" step="0.5">
+              <span class="input-group-text">Width</span>
+              <input type="number" class="form-control" id="paper-size-width-1d" value="9.99" step="0.5">
             </div>
           </td>
         </tr>
         <tr>
-          <td style="width:50%">
-            <label for="margin" class="form-label">Margins</label>
+          <td>
+            <label for="margin-1d" class="form-label">Margins</label>
             <div class="input-group">
-              <select class="form-select" id="margin">
+              <select class="form-select" id="margin-1d">
                 <option selected value="currentsheet">Normal</option>
                 <option value="workbook">Narrow</option>
                 <option value="selectedcells">Wide</option>
                 <option value="custom">Custom</option>
               </select>
-              <span class="input-group-text" id="basic-addon3">Top</span>
-              <input type="number" class="form-control" value="0.1" id="basic-url" aria-describedby="basic-addon3">
-              <span class="input-group-text" id="basic-addon3">Left</span>
-              <input type="number" class="form-control" value="1.1" id="basic-url" aria-describedby="basic-addon3">
-              <span class="input-group-text" id="basic-addon3">Right</span>
-              <input type="number" class="form-control" value="2.2" id="basic-url" aria-describedby="basic-addon3">
-              <span class="input-group-text" id="basic-addon3">Bottom</span>
-              <input type="number" class="form-control" value="3.3" id="basic-url" aria-describedby="basic-addon3">
+              <span class="input-group-text">Top</span>
+              <input type="number" class="form-control" value="0.1" id="margin-top-1d" aria-describedby="basic-addon3">
+              <span class="input-group-text">Left</span>
+              <input type="number" class="form-control" value="1.1" id="margin-left-1d" aria-describedby="basic-addon3">
+              <span class="input-group-text">Right</span>
+              <input type="number" class="form-control" value="2.2" id="margin-right-1d" aria-describedby="basic-addon3">
+              <span class="input-group-text">Bottom</span>
+              <input type="number" class="form-control" value="3.3" id="margin-bottom-1d" aria-describedby="basic-addon3">
             </div>
           </td>
         </tr>
         <tr>
-          <td style="width:50%">
-            <label for="scale" class="form-label">Scale</label>
+          <td>
+            <label for="scale-1d" class="form-label">Scale</label>
             <div class="input-group">
-              <select class="form-select" id="scale">
+              <select class="form-select" id="scale-1d">
                 <option selected value="normal">Normal (100%)</option>
                 <option value="fittowidth">Fit to width</option>
                 <option value="fittoheight">Fit to height</option>
@@ -91,27 +91,28 @@
                 <option value="custom">Custom</option>
                 <option value="fittipagebreaks">Fit to pagebreaks (100%)</option>
               </select>
-              <span class="input-group-text" id="basic-addon3">Break row at</span>
-              <input type="number" class="form-control" value="20" id="basic-url" aria-describedby="basic-addon3">
-              <span class="input-group-text" id="basic-addon3">Break column at</span>
-              <input type="number" class="form-control" value="5" id="basic-url" aria-describedby="basic-addon3">
+              <span class="input-group-text">Break row at</span>
+              <input type="number" class="form-control" value="20" id="break-row-1d" aria-describedby="basic-addon3">
+              <span class="input-group-text">Break column at</span>
+              <input type="number" class="form-control" value="5" id="break-column-1d" aria-describedby="basic-addon3">
             </div>
           </td>
         </tr>
         <tr>
-          <td style="width:50%">
+          <td>
+            <label>Page Orientation</label>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-              <label class="form-check-label" for="flexRadioDefault1"> Default radio </label>
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="landscape-1d">
+              <label class="form-check-label" for="landscape-1d">Landscape</label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-              <label class="form-check-label" for="flexRadioDefault2"> Default checked radio </label>
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="portait-1d" checked>
+              <label class="form-check-label" for="portait-1d">Portait</label>
             </div>
           </td>
         </tr>
         <tr>
-          <td style="width:50%">
+          <td>
             <div class="input-group">
             </div>
           </td>
